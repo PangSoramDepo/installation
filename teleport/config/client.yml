@@ -1,0 +1,16 @@
+teleport:
+  nodename: Laravel_PSD
+  data_dir: /var/lib/teleport
+  auth_token: "c2b479f98769398a99b9d62f058ddae4"
+  auth_servers:
+    - tlp.pangsoramdepo.com:3025
+  log:
+  ca_pin: sha256:b98266f2ee6692b1d6481dd154df53151272c4f6acf4cbb11e1d67faa17b1505
+  # advertise_ip: CLIENT IP ADDRESS
+  advertise_ip: 172.20.0.6
+auth_service:
+  enabled: no
+ssh_service:
+  enabled: yes
+proxy_service:
+  enabled: n
