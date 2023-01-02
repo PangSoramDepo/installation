@@ -14,5 +14,5 @@ cd teleport
 # IF YOU INSTALL CLIENT PLEASE USE client.yml
 nano config.yml
 
-teleport start --config="/home/pi/v11_teleport/telepor/config.yml"
+teleport start --config="/home/pi/v11_teleport/teleport/config.yml"
 
