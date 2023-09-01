@@ -1,0 +1,8 @@
+http.host: "0.0.0.0"
+path.config: /usr/share/logstash/pipeline
+xpack.monitoring.elasticsearch.hosts: [ "elasticsearch:9200" ]
+
+# ENABLE THIS IN CASE ELASTIC SEARCH SET UP AUTHENTICATION
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.username: logstash_system
+xpack.monitoring.elasticsearch.password: your_password

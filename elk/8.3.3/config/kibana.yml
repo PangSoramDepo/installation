@@ -1,0 +1,12 @@
+server.host: "0.0.0.0"
+server.shutdownTimeout: "5s"
+server.publicBaseUrl: https://kibana.pangsoramdepo.com
+elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+monitoring.ui.container.elasticsearch.enabled: true
+
+# ENABLE THIS IN CASE ELASTIC SEARCH SET UP AUTHENTICATION
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "your_password"
+
+# 32 CHARACTAR
+xpack.security.encryptionKey: "password9Pangsoramdepo9868099012"
