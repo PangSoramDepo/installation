@@ -1,0 +1,12 @@
+*** In case want to change domain:
+- nano wso2am-4.0.0/repository/conf/deployment.toml
+- then change hostname to your domain
+- restart the container
+
+*** In case change admin password:
+- Don't forget change in deployment.toml file also
+
+*** There are 3 url:
+- /publisher
+- /carbon
+- /devportal

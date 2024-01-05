@@ -1,0 +1,26 @@
+version: '3'
+services:
+  wso2am:
+    container_name: wso2am
+    image: wso2am/wso2am:4.0.0-ubuntu
+    ports:
+      - 9443:9443
+      - 8243:8243
+      - 8280:8280
+    volumes:
+      - wso2am-data:/home/wso2carbon/wso2am-4.0.0/repository
+      - wso2am-conf:/home/wso2carbon/wso2am-4.0.0/conf
+    restart: always
+    networks:
+      - wso2am-network
+      - nginxproxymanager_default
+
+volumes:
+  wso2am-data:
+  wso2am-conf:
+
+networks:
+  wso2am-network:
+  nginxproxymanager_default:
+    name: nginxproxymanager_default
+    external: true
