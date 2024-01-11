@@ -1,0 +1,43 @@
+version: '2'
+
+services:
+  redis:
+    container_name: redis
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '6379:6379'
+    networks:
+      - redis_default
+      
+  redisinsight:
+    container_name: redisinsight
+    image: redislabs/redisinsight:latest
+    environment:
+      - RITRUSTEDORIGINS=https://redis-ui.pangsoramdepo.com
+      - RIPROXYENABLE=true
+    ports:
+      - 8001:8001
+    networks:
+      - redis_default
+      - nginxproxymanager_default
+      
+  redis-sentinel:
+    container_name: redis_sentinel
+    image: 'bitnami/redis-sentinel:latest'
+    environment:
+      - REDIS_MASTER_HOST=direct.pangsoramdepo.com
+      - REDIS_SENTINEL_RESOLVE_HOSTNAMES=yes
+    ports:
+      - '26379:26379'
+    networks:
+      - redis_default
+
+networks:
+  redis_default:
+    name: redis_default
+    driver: bridge
+  nginxproxymanager_default:
+    name: nginxproxymanager_default
+    external: true
