@@ -1,0 +1,11 @@
+{
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "direct.pangsoramdepo.com",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "D*p01234",
+    "database.dbname": "identity",
+    "database.server.name": "postgres",
+    "table.include.list": "public.permissions"
+}
